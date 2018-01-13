@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta name="google-site-verification" content="D9vf7pn4cokU_qoP0Oy1njW5gfC1pDVBMuk5PbxACOI" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110632068-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-110632068-1');
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="js/modernizr.js"></script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Picolo</title>
+  <meta name="description" content="Betting platform for cryptocurrencies and tokens">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css' rel='stylesheet' type='text/css'>
+  <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/roadmap.css">
+  <link href='css/index.css' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+  <container id="fullpage">
+    <section id="page1" class="wow fadeIn">
+      <div id="particles1"></div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 style="text-transform: uppercase">
+            Welcome to the picolo project
+          </h1>
+            <br>
+            <p style="font-weight:normal">Picolo is a betting platform for cryptocurrencies and tokens</p>
+            <br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <a href="Whitepaper.pdf" class="btn btn-default btn-submit">Whitepaper</a>
+              <a href="paper.pdf" class="btn btn-default btn-submit">Technical paper</a>
+            </div>
+            <br>
+            <p id="feedback" style="font-weight:normal">Get 100 picolos for paper <a id='popup' href='javascript:void(0)'>feedback</a></p>
+            <br>
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+              <form action="https://picolo.us16.list-manage.com/subscribe/post?u=6f65175a9b108cf8e196d05a5&amp;id=2397ef2519" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <label for="mce-EMAIL" style="font-weight:normal;letter-spacing:1px;">Signup below if you like to be whitelisted for our presale</label>
+                  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required style="font-family:avenirLight;">
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6f65175a9b108cf8e196d05a5_2397ef2519" tabindex="-1" value=""></div>
+                  <div class="clear"><input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+              </form>
+            </div>
+            <!--End mc_embed_signup-->
+            <br>
+            <p>Questions? Join our <a href="https://t.me/picolo_ai" target="_blank">telegram</a></p><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p>Follow us on: <a href='https://twitter.com/picolo_ai' target="_blank "><img src='img/twitter_round.svg' title='Twitter' class='follow-logo'/></a>
+              <a href='https://medium.com/@picolo_ai' target="_blank"><img src='img/medium.svg' title='Medium' class='follow-logo'/></a>
+              <a href='https://www.reddit.com/user/picolo_ai/' target="_blank"><img src='img/reddit.svg' title='Reddit' class='follow-logo'/></a>
+            </p>
+            <br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="page2">
+      <div id="particles2"></div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-3">
+          </div>
+          <div class="col-md-6">
+            <h3 style="color:black">
+            There are two major problems in the world of cryptocurrencies and tokens
+          </h3>
+          </div>
+          <div class="col-md-3">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-3">
+          </div>
+          <div class="col-md-3 wow fadeIn box1 shadow">
+            <p class="col-header">
+              Limited trading options
+            </p>
+            <br>
+            <ul>
+              <li>A majority of cryptos cannot be shorted</li>
+              <li>Diversification options get cumbersome when holding more than 10 cryptos</li>
+              <li>Limited portfolio management options</li>
+              <li>Inability to hedge risk</li>
+              <li>Exchanges not accepting new users</li>
+            </ul>
+          </div>
+          <div class="col-md-3 wow fadeIn box1 shadow">
+            <p class="col-header0">
+              Unreliable information sources
+            </p>
+            <br>
+            <ul>
+              <li>No single repository of reliable information</li>
+              <li>A large number of siloed groups</li>
+              <li>Unstructured data in many different places</li>
+              <li>False information is easy to spread</li>
+              <li>News is not uniformly distributed</li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+          </div>
+          <div class="col-md-6">
+            <br>
+            <h4 style="color:#852d91">
+            Picolo solves these two problems at the same in a simple yet elegant manner
+          </h4>
+          </div>
+          <div class="col-md-3">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="page3">
+      <div id="particles3"></div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-8">
+            <p class="main-desc">
+              Picolo is a platform where users can play betting games with each other or with the crowds. Bets can be placed on the price movements of cryptos, on unreleased tokens, on upcoming ICOs, on general events, or just as a way to gather information. Users
+              can also create bets on anything they want, not just cryptos. Possibilities are endless. All bets can be placed with a single platform token irrespective of the crypto being bet on.
+              <br>
+            </p>
+          </div>
+          <div class="col-md-2">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-4 wow fadeIn box1 shadow">
+            <p class="col-header1">
+              Betting as a secondary market
+            </p>
+            <p class="col-desc">A major function of the platform is its role as a secondary market for trading cryptos. All one needs to do is take bets on price movements. Users can: </p>
+            <ul>
+              <li>Diversify portfolio with a single token by simply taking bets on any number of cryptos</li>
+              <li>Place different bets in terms of amount, price and time with different users where the bettor solely controls all aspects of the bet</li>
+              <li>Hedge risk by placing short term bearish bets when the they are long on the underlying</li>
+              <li>Portfolio betting - Users can post their real portfolios or construct a fantasy portfolio and make them available for betting on by other users</li>
+              <li>Bets are controlled by smart contracts eliminating any counterparty risk</li>
+            </ul>
+          </div>
+          <div class="col-md-4 wow fadeIn box1 shadow">
+            <p class="col-header2">
+              Prediction AI and bets as information source
+            </p>
+            <p class="col-desc">All data crated on the platform is combined with external data and is fed to AI algorithms. They can then be used to predict price movements and:</p>
+            <ul>
+              <li>Answer questions like "XLM when moon?"</li>
+              <li>Suggest trades</li>
+              <li>Take bets from real users</li>
+              <li>Take bets from other AI agents</li>
+              <li>Analyze overall sentiment</li>
+            </ul>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="page4">
+      <div id="particles4"></div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-4 wow fadeIn box1 shadow">
+            <p class="col-header3">
+              Syndicate betting
+            </p>
+            <p class="col-desc">Users can create or join a syndicate that takes bets on behalf of them and other users. They might want to do so in cases like:</p>
+            <ul>
+              <li>A bet is too large for a single user to take</li>
+              <li>Not enough expertise to take bets by themselves</li>
+              <li>Time constraints preventing them to regularly watch the market</li>
+              <li>Just as a second portfolio along side their individual portfolio</li>
+              <li>A user is a fulltime portfolio manager or has special expertise in managing wealth for others</li>
+            </ul>
+            <p class="col-desc">All winnings are proportionately distributed to all members of the syndicate</p>
+          </div>
+          <div class="col-md-4 wow fadeIn box1 shadow">
+            <p class="col-header4">
+              More features
+            </p>
+            <p class="col-desc">Various supporting features include:</p>
+            <ul>
+              <li>Bets on tokens that are not yet available for trading</li>
+              <li>Bets on ICOs</li>
+              <li>Token specific channels for discussions, asking questions, comments etc so that all related information is easily found</li>
+              <li>A loaded user profile with features like favoriting ICOs, watching tokens, live portfolio view, bookmarking comments, saving other users’ portfolios etc</li>
+              <li>Bet recommendations based on previous bets</li>
+              <li>Leveraged betting. If the price of the platform token goes up after a bet is placed, additional tokens will be made available to the user for betting</li>
+            </ul>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="page5">
+      <div class="wow fadeIn content">
+        <br>
+        <h1>Roadmap</h1>
+        <div id="cd-timeline" class="cd-container">
+
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-euphonium">
+              <img src="img/euphonium.svg" alt="Euphonium">
+            </div>
+            <div class="cd-timeline-content">
+              <li>Whitepaper and technical paper are finalized and released.</li>
+              <li>Team building starts.</li>
+              <span class="cd-date">Euphonium - Jan 2018</span>
+            </div>
+          </div>
+
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-carimba">
+              <img src="img/carimba.svg" alt="Carimba">
+            </div>
+            <div class="cd-timeline-content">
+              <li>Presale, platform development and community building start.</li>
+              <li>Team expanded to include advisors.</li>
+              <span class="cd-date">Carimba - Q1 2018</span>
+            </div>
+          </div>
+
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-lyra">
+              <img src="img/lyra.svg" alt="Lyra">
+            </div>
+            <div class="cd-timeline-content">
+              <li>Core betting features including portfolio and ICO betting are completed.</li>
+              <li>Social and informational aspects of the platform are developed.</li>
+              <li>Main sale starts.</li>
+              <span class="cd-date">Lyra - Q2 2018</span>
+            </div>
+          </div>
+
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-cithara">
+              <img src="img/cithara.svg" alt="Cithara">
+            </div>
+            <div class="cd-timeline-content">
+              <li>Syndicate betting, AI bet suggestions and betting with AI are complete.</li>
+              <li>User profile updates to include live portfolio view etc.</li>
+              <span class="cd-date">Cithara - Q3 2018</span>
+            </div>
+          </div>
+
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-ocarina">
+              <img src="img/ocarina.svg" alt="Ocarina">
+            </div>
+            <div class="cd-timeline-content">
+              <li>Platform open to third party developers. AI to AI betting is implemented.</li>
+              <li>Leverage is made available.</li>
+              <span class="cd-date">Ocarina - Q4 2018</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="page6">
+      <div class="wow fadeIn content">
+        <h1>Token sale details coming soon</h1>
+      </div>
+    </section>
+
+    <section id="page7">
+      <div class="wow fadeIn content">
+        <h1>Team page coming soon</h1>
+      </div>
+    </section>
+
+  </container>
+
+  <script src="js/index.js "></script>
+  <script src="js/particles.min.js "></script>
+  <script src="js/embed.js "></script>
+  <script type="text/javascript ">
+    let popup;
+    window.addEventListener('DOMContentLoaded', function() {
+      // load popup
+      popup = window.typeformEmbed.makePopup('https://picolo-ai.typeform.com/to/KVwzgA', {
+        hideHeaders: true,
+        hideFooter: true,
+        onSubmit: function() {
+          $('#feedback').html('Thank you. You will receive an email once your tokens have been allocated.');
+          popup.close();
+        }
+      });
+    })
+    $('#popup').on("click ", function() {
+      popup.open();
+    })
+
+    particlesJS.load('particles1', 'assets/particles1.json', function() {});
+    particlesJS.load('particles2', 'assets/particles2.json', function() {});
+    particlesJS.load('particles3', 'assets/particles3.json', function() {});
+    particlesJS.load('particles4', 'assets/particles3.json', function() {});
+  </script>
+
+</body>
+
+</html>

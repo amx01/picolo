@@ -1,1 +1,2 @@
-## picolo.ai client
+## run client
+  `yarn start`

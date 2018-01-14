@@ -3,7 +3,7 @@
   background-color: #660074;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   .text {
-    font-family: Barlow;
+    font-family: 'Avenir';
     font-size: 22px;
     font-weight: 500;
     font-style: normal;
@@ -38,7 +38,7 @@
         padding-bottom: 10px;
       }
       &.primary {
-        font-family: Barlow;
+        font-family: 'Avenir';
         font-size: 18px;
         font-weight: 500;
         font-style: normal;
@@ -54,7 +54,7 @@
   }
     .name {
       height: 40px;
-      font-family: Barlow;
+      font-family: 'Avenir';
       font-size: 26px;
       font-weight: 600;
       font-style: normal;
@@ -96,7 +96,7 @@
           width: 33.3%;
           line-height: 90px;
           &.simple {
-            font-family: Barlow;
+            font-family: 'Avenir';
             font-size: 24px;
             font-weight: normal;
             font-style: normal;
@@ -112,7 +112,7 @@
           }
           &.left {
             &.bet {
-              font-family: Barlow;
+              font-family: 'Avenir';
               font-size: 24px;
               font-weight: normal;
               font-style: normal;
@@ -133,7 +133,7 @@
           .bold {
             font-weight: 600;
             &.details{
-              font-family: Barlow;
+              font-family: 'Avenir';
               font-size: 22px;
               font-weight: 600;
               font-style: normal;

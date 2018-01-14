@@ -6,14 +6,13 @@ import {
   NumberInput,
   TextInput,
   DateTime,
+  DropDown,
 } from '../utility/inputs'
 import { bindActionCreators } from 'redux'
 
 class PlaceBets extends Component {
   constructor(props, context){
     super(props, context)
-    const web3Context = context.web3
-    console.log('web3', web3Context)
     this.state = {
       showDateTimePicker: false,
       selectedDate: moment(),
@@ -22,7 +21,7 @@ class PlaceBets extends Component {
         {
           text: "Coin you'd like to bet on",
           placeholder: "Select coin",
-          type: "text"
+          type: "dropdown"
         },
         {
           text: "Price prediction (USD)",
@@ -48,11 +47,6 @@ class PlaceBets extends Component {
     this.handleDateTimeSave = this.handleDateTimeSave.bind(this)
   }
 
-  componentDidMount(){
-    // var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
-    // console.log("web3", web3)
-  }
-
   shouldComponentUpdate(){
     return true
   }
@@ -70,6 +64,8 @@ class PlaceBets extends Component {
       let inputType
       let dateTimeInput
       switch(type) {
+       case "dropdown":
+          inputType = <DropDown />
        case "text":
          inputType = <TextInput placeholder={placeholder}/>
          break
@@ -111,7 +107,6 @@ class PlaceBets extends Component {
   }
 
   handleDateTimeSave(){
-    console.log("handleSave")
     this.setState({
       showDateTimePicker: false
     })

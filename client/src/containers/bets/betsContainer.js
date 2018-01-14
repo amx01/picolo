@@ -101,7 +101,6 @@ class BetsContainer extends Component {
   }
 
   confirmBet(){
-    // confirmBet with API.then
     this.setState({
       showConfirmBet: false,
       betPlacedNotification: true,

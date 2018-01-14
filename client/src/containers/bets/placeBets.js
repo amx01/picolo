@@ -10,9 +10,10 @@ import {
 import { bindActionCreators } from 'redux'
 
 class PlaceBets extends Component {
-  constructor(props){
-    super(props)
-
+  constructor(props, context){
+    super(props, context)
+    const web3Context = context.web3
+    console.log('web3', web3Context)
     this.state = {
       showDateTimePicker: false,
       selectedDate: moment(),
@@ -45,6 +46,11 @@ class PlaceBets extends Component {
     this.showDateTimePicker = this.showDateTimePicker.bind(this)
     this.handleDateTimeChange = this.handleDateTimeChange.bind(this)
     this.handleDateTimeSave = this.handleDateTimeSave.bind(this)
+  }
+
+  componentDidMount(){
+    // var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
+    // console.log("web3", web3)
   }
 
   shouldComponentUpdate(){

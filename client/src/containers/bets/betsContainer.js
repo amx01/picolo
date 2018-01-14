@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import TableRow from '../utility/table/tableRow'
 import BooleanModal from '../utility/modal/booleanModal'
 import Notification from '../utility/notifications/notification'
+import {
+  // action
+} from '../../modules/actionCreators/betActionCreators/betActionCreators'
+import * as common from '../common'
 
 class BetsContainer extends Component {
   constructor(props){
@@ -98,7 +102,7 @@ class BetsContainer extends Component {
   }
 
   confirmBet(){
-    // confirmBet with API.then
+  common.openBet();
     this.setState({
       showConfirmBet: false,
       betPlacedNotification: true,
@@ -106,13 +110,13 @@ class BetsContainer extends Component {
   }
 
   cancelBet(){
+  common.cancelBet();
     this.setState({
       showConfirmBet: false
     })
   }
 
   closeNotification(){
-    console.log('is this called')
     this.setState({
       betPlacedNotification: false
     })
@@ -153,5 +157,7 @@ class BetsContainer extends Component {
     )
   }
 }
+
+
 
 export default BetsContainer

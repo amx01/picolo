@@ -6,20 +6,23 @@ import {
   NumberInput,
   TextInput,
   DateTime,
+  DropDown,
 } from '../utility/inputs'
+import { bindActionCreators } from 'redux'
+import * as common from '../common'
 
 class PlaceBets extends Component {
-  constructor(props){
-    super(props)
-
+  constructor(props, context){
+    super(props, context)
     this.state = {
       showDateTimePicker: false,
       selectedDate: moment(),
+      dateTimePlaceholder: "",
       addBetMenu: [
         {
           text: "Coin you'd like to bet on",
           placeholder: "Select coin",
-          type: "text"
+          type: "dropdown"
         },
         {
           text: "Price prediction (USD)",
@@ -45,6 +48,10 @@ class PlaceBets extends Component {
     this.handleDateTimeSave = this.handleDateTimeSave.bind(this)
   }
 
+  shouldComponentUpdate(){
+    return true
+  }
+
   showDateTimePicker(){
     this.setState({
       showDateTimePicker: true
@@ -56,7 +63,10 @@ class PlaceBets extends Component {
     return addBetMenu.map((ele, idx) => {
       const { text, type, placeholder } = ele
       let inputType
+      let dateTimeInput
       switch(type) {
+       case "dropdown":
+          inputType = <DropDown />
        case "text":
          inputType = <TextInput placeholder={placeholder}/>
          break
@@ -64,7 +74,8 @@ class PlaceBets extends Component {
          inputType = <NumberInput placeholder={placeholder}/>
          break
        case "datetime":
-         inputType = <DateTime onClickHandler={this.showDateTimePicker}/>
+         inputType = <DateTime inputValue={this.state.dateTimePlaceholder || "Click for time picker"} onClickHandler={this.showDateTimePicker}/>
+         dateTimeInput = 'date-time-input'
          break
        default:
         return ""
@@ -74,7 +85,7 @@ class PlaceBets extends Component {
           <div className="cell left-padding">
             <div className="left-float medium-bold">{text}</div>
           </div>
-          <div className="cell">
+          <div className={"cell " + dateTimeInput}>
             <div className="input">{ inputType }</div>
           </div>
         </div>
@@ -83,18 +94,21 @@ class PlaceBets extends Component {
   }
 
   confirmBet(){
+    common.openBet();
 
   }
 
-  handleDateTimeChange(m){
-    console.log('m', m)
+  handleDateTimeChange(moment){
+    let selectedDateTime = moment.format("MM/DD/YYYY HH:mm")
+    let formattedDateTime = selectedDateTime.split(" ")
+    formattedDateTime.splice(1, 0, 'at')
+    formattedDateTime.join(" ")
     this.setState({
-      selectedDate: m
+      dateTimePlaceholder: selectedDateTime
     })
   }
 
   handleDateTimeSave(){
-    console.log("handleSave")
     this.setState({
       showDateTimePicker: false
     })
@@ -116,11 +130,11 @@ class PlaceBets extends Component {
         </div>
         <div className="table medium-width">
           <div className="name">New Bets</div>
-          <div className="body">
+          <div className="body transparent-background">
           <div className="card">
             {this.renderBetRows()}
           </div>
-          <div className="text">
+          <div className="text right-float">
             <div className="btn orange" onClick={this.confirmBet}>Confirm Bet</div>
           </div>
           </div>
@@ -129,5 +143,13 @@ class PlaceBets extends Component {
     )
   }
 }
+
+function mapStateToProps(state){
+  // props: state.foo,
+}
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+  // action,
+}, dispatch)
 
 export default PlaceBets

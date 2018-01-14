@@ -12,6 +12,10 @@ module.exports = {
     sokol: {
       provider: new HDWalletProvider(mnemonic, "https://sokol.poa.network"),
       network_id: "*"
+    },
+    ropsten: {
+      provider: new HDWalletProvider(mnemonic, "https://ropsten.infura.io/d9N1uNSOhRmzUXmT2hX2"),
+      network_id: "3"
     }
   }
 };

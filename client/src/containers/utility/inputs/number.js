@@ -16,7 +16,7 @@ class NumberInput extends Component {
   render() {
     const { placeholder} = this.props
     return (
-      <input onKeyDown={this.handleKeyDown} placeholder={placeholder}/>
+      <input className="child" onKeyDown={this.handleKeyDown} placeholder={placeholder}/>
     )
   }
 }

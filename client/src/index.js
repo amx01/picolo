@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
+import { Web3Provider } from 'react-web3'
 import App from './containers/app'
 
 import 'sanitize.css/sanitize.css'
@@ -15,7 +16,9 @@ render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <div>
-        <App />
+        <Web3Provider>
+          <App />
+        </Web3Provider>
       </div>
     </ConnectedRouter>
   </Provider>,

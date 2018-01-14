@@ -17,13 +17,16 @@
       display: inline-block;
       width: 50%;
       line-height: 90px;
+      &.date-time-input{
+        line-height: 30px;
+      }
       &.left-padding{
         padding-left: 60px;
       }
     }
   }
   .medium-bold {
-    font-family: Barlow;
+    font-family: 'Avenir', Helvetica;
     font-size: 22px;
     font-weight: 500;
     font-style: normal;
@@ -35,13 +38,18 @@
     padding-bottom: 18px;
     padding-right: 60px;
   }
-  .input > input {
-    float: left;
-    border-radius: 200px;
-    border: solid 1px #cbcbcb;
-    outline: none;
-    height: 33px;
-    text-align: center;
+  .input {
+    .child {
+      float: left;
+      border-radius: 200px;
+      border: solid 1px #cbcbcb;
+      outline: none;
+      height: 33px;
+      width: 171px;
+      text-align: center;
+      cursor: pointer;
+      width: 80%;
+    }
   }
   .white-button {
     border-radius: 3px;

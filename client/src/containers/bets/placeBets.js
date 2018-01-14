@@ -60,7 +60,8 @@ class PlaceBets extends Component {
          inputType = <DateInput placeholder={placeholder}/>
          break
        case "time":
-        return inputType = <TimeInput placeholder={placeholder}/>
+         inputType = <TimeInput placeholder={placeholder}/>
+         break
        default:
         return ""
       }
@@ -68,7 +69,6 @@ class PlaceBets extends Component {
         <div key={idx}>
           <div>{text}</div>
           { inputType }
-          <div>{type}</div>
         </div>
       )
     })

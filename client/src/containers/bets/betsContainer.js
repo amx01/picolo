@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import TableRow from '../utility/table/tableRow'
 
 class BetsContainer extends Component {
   constructor(props){
@@ -57,12 +58,17 @@ class BetsContainer extends Component {
     const currentBets = this.state.currentBets
     return currentBets.map((ele, idx) => {
       return (
-        <div key={idx}>
-          <div>{ele.betAmt} PIC</div>
-          <div>{ele.coin} at {ele.betClosePrice}</div>
-          <div>by {ele.expiryDate} at {ele.expiryTime}</div>
-          <div onClick={this.placeBet}>Place Bet</div>
-        </div>
+        <TableRow
+          key={idx}
+          betAmt={ele.betAmt}
+          coin={ele.coin}
+          betClosePrice={ele.betClosePrice}
+          expiryDate={ele.expiryDate}
+          expiryTime={ele.expiryTime}
+          button={true}
+          buttonText={"Place bet"}
+          buttonAction={this.placeBet}
+        />
       )
     })
   }

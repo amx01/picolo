@@ -1,17 +1,20 @@
 import React, { Component } from 'react'
 import TableRow from '../utility/table/tableRow'
+import InputMoment from 'input-moment'
+import moment from 'moment'
 import {
   NumberInput,
   TextInput,
   DateTime,
 } from '../utility/inputs'
-// import PropTypes from 'prop-types'
 
 class PlaceBets extends Component {
   constructor(props){
     super(props)
 
     this.state = {
+      showDateTimePicker: false,
+      selectedDate: moment(),
       addBetMenu: [
         {
           text: "Coin you'd like to bet on",
@@ -37,6 +40,14 @@ class PlaceBets extends Component {
     }
     this.renderBetRows = this.renderBetRows.bind(this)
     this.confirmBet = this.confirmBet.bind(this)
+    this.showDateTimePicker = this.showDateTimePicker.bind(this)
+    this.handleDateTimeChange = this.handleDateTimeChange.bind(this)
+  }
+
+  showDateTimePicker(){
+    this.setState({
+      showDateTimePicker: true
+    })
   }
 
   renderBetRows(){
@@ -52,7 +63,7 @@ class PlaceBets extends Component {
          inputType = <NumberInput placeholder={placeholder}/>
          break
        case "datetime":
-         inputType = <DateTime/>
+         inputType = <DateTime onClickHandler={this.showDateTimePicker}/>
          break
        default:
         return ""
@@ -74,17 +85,34 @@ class PlaceBets extends Component {
 
   }
 
+  handleDateTimeChange(m){
+    console.log('m', m)
+    this.setState({
+      selectedDate: m
+    })
+  }
+
   render() {
     return (
-      <div className="table medium-width">
-        <div className="name">New Bets</div>
-        <div className="body">
-        <div className="card">
-          {this.renderBetRows()}
+      <div className="relative">
+        <div className="calendar">
+        <InputMoment
+            moment={this.state.selectedDate}
+            onChange={this.handleDateTimeChange}
+            minStep={5}
+            onSave={this.handleSave}
+        />
         </div>
-        <div className="text">
-          <div className="btn-orange" onClick={this.confirmBet}>Confirm Bet</div>
-        </div>
+        <div className="table medium-width">
+          <div className="name">New Bets</div>
+          <div className="body">
+          <div className="card">
+            {this.renderBetRows()}
+          </div>
+          <div className="text">
+            <div className="btn orange" onClick={this.confirmBet}>Confirm Bet</div>
+          </div>
+          </div>
         </div>
       </div>
     )

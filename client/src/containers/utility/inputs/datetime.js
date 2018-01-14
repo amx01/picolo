@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const DateTime = (props) => {
-  const { placeholder } = props
+  const { placeholder, onClickHandler } = props
   return (
-    <div>Click for Time Picker</div>
+    <div onClick={onClickHandler}>Click for Time Picker</div>
   )
 }
 

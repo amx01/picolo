@@ -68,6 +68,7 @@ class BetsContainer extends Component {
   }
 
   placeBet(){
+    this.props.history.push("/placeBets")
   }
 
   render() {

@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import TableRow from '../utility/table/tableRow'
 import BooleanModal from '../utility/modal/booleanModal'
 import Notification from '../utility/notifications/notification'
+import {
+  // action
+} from '../../modules/actionCreators/betActionCreators/betActionCreators'
 
 class BetsContainer extends Component {
   constructor(props){
@@ -112,7 +115,6 @@ class BetsContainer extends Component {
   }
 
   closeNotification(){
-    console.log('is this called')
     this.setState({
       betPlacedNotification: false
     })
@@ -153,5 +155,7 @@ class BetsContainer extends Component {
     )
   }
 }
+
+
 
 export default BetsContainer

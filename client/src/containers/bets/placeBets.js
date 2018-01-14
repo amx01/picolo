@@ -8,6 +8,7 @@ import {
   DateTime,
 } from '../utility/inputs'
 import { bindActionCreators } from 'redux'
+import * as common from '../common'
 
 class PlaceBets extends Component {
   constructor(props, context){
@@ -92,6 +93,7 @@ class PlaceBets extends Component {
   }
 
   confirmBet(){
+    common.openBet();
 
   }
 

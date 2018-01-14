@@ -8,6 +8,8 @@
   height: 150px;
   padding: 20px;
   margin-top: 54px;
+  overflow: auto;
+  height: auto;
   &.small {
     border-radius: 4px;
     background-color: #ffffff;

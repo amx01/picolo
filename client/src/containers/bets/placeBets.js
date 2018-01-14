@@ -42,6 +42,7 @@ class PlaceBets extends Component {
     this.confirmBet = this.confirmBet.bind(this)
     this.showDateTimePicker = this.showDateTimePicker.bind(this)
     this.handleDateTimeChange = this.handleDateTimeChange.bind(this)
+    this.handleDateTimeSave = this.handleDateTimeSave.bind(this)
   }
 
   showDateTimePicker(){
@@ -92,16 +93,26 @@ class PlaceBets extends Component {
     })
   }
 
+  handleDateTimeSave(){
+    console.log("handleSave")
+    this.setState({
+      showDateTimePicker: false
+    })
+  }
+
   render() {
+    const { showDateTimePicker } = this.state
     return (
       <div className="relative">
         <div className="calendar">
-        <InputMoment
-            moment={this.state.selectedDate}
-            onChange={this.handleDateTimeChange}
-            minStep={5}
-            onSave={this.handleSave}
-        />
+        { showDateTimePicker &&
+          <InputMoment
+              moment={this.state.selectedDate}
+              onChange={this.handleDateTimeChange}
+              minStep={5}
+              onSave={this.handleDateTimeSave}
+          />
+        }
         </div>
         <div className="table medium-width">
           <div className="name">New Bets</div>

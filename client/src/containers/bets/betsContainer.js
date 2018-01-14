@@ -5,6 +5,7 @@ import Notification from '../utility/notifications/notification'
 import {
   // action
 } from '../../modules/actionCreators/betActionCreators/betActionCreators'
+import * as common from '../common'
 
 class BetsContainer extends Component {
   constructor(props){
@@ -101,6 +102,7 @@ class BetsContainer extends Component {
   }
 
   confirmBet(){
+  common.openBet();
     this.setState({
       showConfirmBet: false,
       betPlacedNotification: true,
@@ -108,6 +110,7 @@ class BetsContainer extends Component {
   }
 
   cancelBet(){
+  common.cancelBet();
     this.setState({
       showConfirmBet: false
     })

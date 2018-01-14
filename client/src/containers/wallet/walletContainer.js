@@ -19,7 +19,9 @@ class WalletContainer extends Component {
           expiryTime: "12:00pm",
           betMaker: "John Doe",
           betPlaceDate: "1/12",
-          betPlaceTime: "7:30pm"
+          betPlaceTime: "7:30pm",
+          open: false,
+          claimed: false
         },
         {
           betAmt: 15,
@@ -29,7 +31,9 @@ class WalletContainer extends Component {
           expiryTime: "12:00pm",
           betMaker: "John Doe",
           betPlaceDate: "1/12",
-          betPlaceTime: "7:30pm"
+          betPlaceTime: "7:30pm",
+          open: false,
+          claimed: false
         },
         {
           betAmt: 15,
@@ -39,7 +43,9 @@ class WalletContainer extends Component {
           expiryTime: "12:00pm",
           betMaker: "John Doe",
           betPlaceDate: "1/12",
-          betPlaceTime: "7:30pm"
+          betPlaceTime: "7:30pm",
+          open: true,
+          claimed: false
         },
         {
           betAmt: 15,
@@ -49,7 +55,9 @@ class WalletContainer extends Component {
           expiryTime: "12:00pm",
           betMaker: "John Doe",
           betPlaceDate: "1/12",
-          betPlaceTime: "7:30pm"
+          betPlaceTime: "7:30pm",
+          open: true,
+          claimed: false
         },
         {
           betAmt: 15,
@@ -59,10 +67,38 @@ class WalletContainer extends Component {
           expiryTime: "12:00pm",
           betMaker: "John Doe",
           betPlaceDate: "1/12",
-          betPlaceTime: "7:30pm"
+          betPlaceTime: "7:30pm",
+          open: false,
+          claimed: true
+        },
+        {
+          betAmt: 15,
+          betClosePrice: 1800,
+          coin: "ETH",
+          expiryDate: "1/13",
+          expiryTime: "12:00pm",
+          betMaker: "John Doe",
+          betPlaceDate: "1/12",
+          betPlaceTime: "7:30pm",
+          open: false,
+          claimed: false
+        },
+        {
+          betAmt: 15,
+          betClosePrice: 1800,
+          coin: "ETH",
+          expiryDate: "1/13",
+          expiryTime: "12:00pm",
+          betMaker: "John Doe",
+          betPlaceDate: "1/12",
+          betPlaceTime: "7:30pm",
+          open: false,
+          claimed: true
         }]
       }
     this.renderWallet = this.renderWallet.bind(this)
+    this.cancelBet = this.cancelBet.bind(this)
+    this.claimBet = this.claimBet.bind(this)
   }
 
   renderBalance(){
@@ -80,11 +116,22 @@ class WalletContainer extends Component {
     )
   }
 
+  cancelBet(){
+    console.log('cancel')
+  }
+
+  claimBet(){
+  
+  }
+
   renderWallet(){
     const userBets = this.state.userBets
     return userBets.map((ele, idx) => {
+
       return (
         <TableRow
+          open={ele.open}
+          claimed={ele.claimed}
           className={"row"}
           key={idx}
           betAmt={ele.betAmt}
@@ -92,7 +139,10 @@ class WalletContainer extends Component {
           betClosePrice={ele.betClosePrice}
           expiryDate={ele.expiryDate}
           expiryTime={ele.expiryTime}
-          text={"Bet placed " + `${ele.betPlaceDate}` + " at " + `${ele.betPlaceTime}`}
+          text={`${ele.betPlaceDate}` + " at " + `${ele.betPlaceTime}`}
+          customWidth={"wide"}
+          smallWidth={"small"}
+          cancelBet={this.cancelBet}
         />
       )
     })
@@ -108,7 +158,7 @@ class WalletContainer extends Component {
             <div className="table-header">
               <div className="text-container">
                 <div className="text">Bet(PIC)</div>
-                <div className="text left-align">Details</div>
+                <div className="text left-align wide">Details</div>
                 <div className="text left-align">Timestamp of Bet Placed</div>
               </div>
             </div>
@@ -120,7 +170,7 @@ class WalletContainer extends Component {
           <div className="table-header">
             <div className="text-container">
               <div className="text">Bet(PIC)</div>
-              <div className="text left-align">Details</div>
+              <div className="text left-align wide">Details</div>
               <div className="text left-align">Transaction Timestamp</div>
             </div>
           </div>

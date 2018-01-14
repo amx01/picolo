@@ -11,10 +11,10 @@ const Balance = (props) => {
             <div className="text left simple">
               {text}
             </div>
-            <div className="text simple left-align">
+            <div className="text simple left-align wide">
               {PICBalance.toFixed(5)}
             </div>
-            <div className="text simple">
+            <div className="text simple left-align">
               (${USDBalance.toFixed(2)} USD)
             </div>
           </div>

@@ -20,6 +20,7 @@ class BetsContainer extends Component {
           coin: "ETH",
           expiryDate: "1/13",
           expiryTime: "12:00pm",
+          betID: "1",
           betMaker: "John Doe"
         },
         {
@@ -28,6 +29,7 @@ class BetsContainer extends Component {
           coin: "ETH",
           expiryDate: "1/13",
           expiryTime: "12:00pm",
+          betID: "1",
           betMaker: "John Doe"
         },
         {
@@ -36,6 +38,7 @@ class BetsContainer extends Component {
           coin: "ETH",
           expiryDate: "1/13",
           expiryTime: "12:00pm",
+          betID: "1",
           betMaker: "John Doe"
         },
         {
@@ -44,6 +47,7 @@ class BetsContainer extends Component {
           coin: "ETH",
           expiryDate: "1/13",
           expiryTime: "12:00pm",
+          betID: "1",
           betMaker: "John Doe"
         },
         {
@@ -52,6 +56,7 @@ class BetsContainer extends Component {
           coin: "ETH",
           expiryDate: "1/13",
           expiryTime: "12:00pm",
+          betID: "1",
           betMaker: "John Doe"
         }
       ]

@@ -1,9 +1,9 @@
 import React from 'react'
 
 const TextInput = (props) => {
-  const { placeholder } = props
+  const { placeholder, customClass } = props
   return (
-    <input className="child" placeholder={placeholder}/>
+    <input className={"child " + customClass} placeholder={placeholder}/>
   )
 }
 

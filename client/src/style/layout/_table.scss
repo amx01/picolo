@@ -95,6 +95,12 @@
           display: inline-block;
           width: 33.3%;
           line-height: 90px;
+          &.wide {
+            width: 26%;
+          }
+          &.small {
+            width: 10%;
+          }
           &.simple {
             font-family: 'Avenir';
             font-size: 24px;
@@ -109,6 +115,9 @@
           }
           &.left-align {
             text-align: left;
+          }
+          &.purple {
+            color: #852d91;
           }
           &.left {
             &.bet {

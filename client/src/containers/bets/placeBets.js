@@ -6,7 +6,6 @@ import {
   NumberInput,
   TextInput,
   DateTime,
-  DropDown,
 } from '../utility/inputs'
 import { bindActionCreators } from 'redux'
 
@@ -21,7 +20,7 @@ class PlaceBets extends Component {
         {
           text: "Coin you'd like to bet on",
           placeholder: "Select coin",
-          type: "dropdown"
+          type: "text"
         },
         {
           text: "Price prediction (USD)",
@@ -63,11 +62,11 @@ class PlaceBets extends Component {
       const { text, type, placeholder } = ele
       let inputType
       let dateTimeInput
+      let placeholderSub
       switch(type) {
-       case "dropdown":
-          inputType = <DropDown />
        case "text":
-         inputType = <TextInput placeholder={placeholder}/>
+         placeholderSub = "Ethereum(ETH)"
+         inputType = <TextInput placeholder={placeholderSub}/>
          break
        case "num":
          inputType = <NumberInput placeholder={placeholder}/>

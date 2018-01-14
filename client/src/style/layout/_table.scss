@@ -22,6 +22,33 @@
   width: 76vw;
   position: relative;
 
+  .notification-container{
+    position: absolute;
+    background: white;
+    width: 25%;
+    right: 0;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    .message {
+      &.success {
+        font-weight: bold;
+        color: #00ac07;
+        padding-bottom: 10px;
+      }
+      &.primary {
+        font-family: Barlow;
+        font-size: 18px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+        color: #030303;
+      }
+    }
+  }
+
   &.medium-width {
     width: 58vw;
   }

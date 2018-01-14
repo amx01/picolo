@@ -9,3 +9,31 @@
 .right-float {
   float: right;
 }
+
+.close-x {
+    background: white;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    float: right;
+    margin-right: 0px;
+    margin-top: -6px;
+    cursor: pointer;
+}
+.close-x:after {
+    content: '';
+    height: 24px;
+    border-left: 2px solid black;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 10px;
+}
+
+.close-x:before {
+    content: '';
+    height: 24px;
+    border-left: 2px solid black;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 10px;
+}

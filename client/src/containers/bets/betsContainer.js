@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TableRow from '../utility/table/tableRow'
 import BooleanModal from '../utility/modal/booleanModal'
+import Notification from '../utility/notifications/notification'
 
 class BetsContainer extends Component {
   constructor(props){
@@ -8,6 +9,7 @@ class BetsContainer extends Component {
 
     this.state = {
       showConfirmBet: false,
+      betPlacedNotification: false,
       currentBets: [
         {
           betAmt: 15,
@@ -56,6 +58,7 @@ class BetsContainer extends Component {
     this.displayBets = this.displayBets.bind(this)
     this.confirmBet = this.confirmBet.bind(this)
     this.cancelBet = this.cancelBet.bind(this)
+    this.closeNotification = this.closeNotification.bind(this)
   }
 
   displayBets(){
@@ -97,7 +100,8 @@ class BetsContainer extends Component {
   confirmBet(){
     // confirmBet with API.then
     this.setState({
-      showConfirmBet: false
+      showConfirmBet: false,
+      betPlacedNotification: true,
     })
   }
 
@@ -107,10 +111,26 @@ class BetsContainer extends Component {
     })
   }
 
+  closeNotification(){
+    console.log('is this called')
+    this.setState({
+      betPlacedNotification: false
+    })
+  }
+
   render() {
-    const { showConfirmBet } = this.state
+    const { showConfirmBet, betPlacedNotification } = this.state
     return (
       <div className="table">
+        {
+          betPlacedNotification &&
+          <Notification
+            headerText={"Success"}
+            type={"Success"}
+            primaryMessage={"Your bet has been placed."}
+            closeNotification={this.closeNotification}
+            />
+        }
         { showConfirmBet &&
           <BooleanModal
             primaryMessage={"Take this bet?"}

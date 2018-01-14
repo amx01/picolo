@@ -1,0 +1,56 @@
+.table-header {
+  border-radius: 3px;
+  background-color: #660074;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  .text {
+    font-family: Barlow;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16vh;
+  width: 76vw;
+    .name {
+      font-size: 22px;
+    }
+
+    .body {
+      .row:nth-child(1) {
+        border-top: 1px solid black;
+      }
+      .row {
+         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      }
+      .text-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        height: 90px;
+        .text {
+          display: inline-block;
+          width: 33.3%;
+          line-height: 90px;
+          &.left {
+            padding-left: 34px;
+          }
+          .bold {
+            font-weight: bold;
+          }
+        }
+      }
+      .left {
+        font-size: 20px;
+      }
+    }
+}

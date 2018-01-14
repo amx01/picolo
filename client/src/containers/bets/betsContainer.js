@@ -59,6 +59,7 @@ class BetsContainer extends Component {
     return currentBets.map((ele, idx) => {
       return (
         <TableRow
+          className={"row"}
           key={idx}
           betAmt={ele.betAmt}
           coin={ele.coin}
@@ -66,6 +67,7 @@ class BetsContainer extends Component {
           expiryDate={ele.expiryDate}
           expiryTime={ele.expiryTime}
           button={true}
+          buttonClass={"btn-green"}
           buttonText={"Place bet"}
           buttonAction={this.placeBet}
         />
@@ -79,9 +81,17 @@ class BetsContainer extends Component {
 
   render() {
     return (
-      <div>
-        <div>Active Bets</div>
-        { this.displayBets() }
+      <div className="table">
+        <div className="name">Active Bets</div>
+        <div className="body">
+          <div className="table-header">
+            <div className="text-container">
+              <div className="text">Bet(PIC)</div>
+              <div className="text">Details</div>
+            </div>
+          </div>
+          { this.displayBets() }
+        </div>
       </div>
     )
   }

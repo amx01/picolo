@@ -5,7 +5,7 @@ const Balance = (props) => {
   const { PICBalance, text, USDBalance, className } = props
   return (
     <div className="table">
-      <div className="body">
+      <div className="body no-margin-bottom">
         <div className="row no-border">
           <div className="text-container">
             <div className="text left simple">

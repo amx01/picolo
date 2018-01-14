@@ -109,11 +109,23 @@ class WalletContainer extends Component {
               <div className="text-container">
                 <div className="text">Bet(PIC)</div>
                 <div className="text left-align">Details</div>
-                <div className="text left-align">Timestamp</div>
+                <div className="text left-align">Timestamp of Bet Placed</div>
               </div>
             </div>
             {this.renderWallet()}
         </div>
+
+        <div className="name">Closed Bets</div>
+        <div className="body">
+          <div className="table-header">
+            <div className="text-container">
+              <div className="text">Bet(PIC)</div>
+              <div className="text left-align">Details</div>
+              <div className="text left-align">Transaction Timestamp</div>
+            </div>
+          </div>
+          {this.renderWallet()}
+      </div>
       </div>
     </div>
     )

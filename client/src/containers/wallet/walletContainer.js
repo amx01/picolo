@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
 import TableRow from '../utility/table/tableRow'
+import Balance from '../wallet/balance'
 
 class WalletContainer extends Component {
   constructor(props){
     super(props)
     this.state = {
+      userBalance: {
+        PICBalance: 300.00000,
+        USDBalance: 100.00
+      },
       userBets: [
         {
           betAmt: 15,
@@ -61,7 +66,17 @@ class WalletContainer extends Component {
   }
 
   renderBalance(){
-
+    const userBalance = this.state.userBalance
+    return (
+      <div>
+        <div>My Wallet</div>
+        <Balance
+          text={"Picolo Balance"}
+          PICBalance={userBalance.PICBalance}
+          USDBalance={userBalance.USDBalance}
+        />
+      </div>
+    )
   }
 
   renderWallet(){
@@ -85,6 +100,7 @@ class WalletContainer extends Component {
     return (
       <div>
         <div>{this.renderBalance()}</div>
+        <div className="tableHeader">My Bets</div>
         <div>{this.renderWallet()}</div>
       </div>
     )

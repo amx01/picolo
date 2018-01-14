@@ -11,7 +11,7 @@ const TableRow = (props) => {
     button,
     buttonText,
     buttonAction,
-    text
+    text,
   } = props
 
   return (

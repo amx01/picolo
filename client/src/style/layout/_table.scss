@@ -20,6 +20,11 @@
   margin-right: auto;
   margin-top: 16vh;
   width: 76vw;
+  position: relative;
+
+  &.medium-width {
+    width: 58vw;
+  }
     .name {
       height: 40px;
       font-family: Barlow;
@@ -37,6 +42,7 @@
 
     .body {
       margin-bottom: 80px;
+      background-color: white;
       &.no-margin-bottom {
         margin-bottom: 0;
       }

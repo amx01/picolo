@@ -1,0 +1,35 @@
+.modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 35%;
+  z-index: 1;
+  height: 150px;
+  padding: 20px;
+  margin-top: 54px;
+  &.small {
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.message {
+  font-family: Europa;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #030303;
+  font-family: "Barlow", Helvetica, Arial, sans-serif;
+  &.primary {
+    font-size: 22px;
+    padding-bottom: 10px;
+  }
+  &.secondary {
+    font-size: 18px;
+  }
+}

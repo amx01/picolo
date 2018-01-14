@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import TableRow from '../utility/table/tableRow'
 import {
-  DateInput,
   NumberInput,
   TextInput,
-  TimeInput,
+  DateTime,
 } from '../utility/inputs'
 // import PropTypes from 'prop-types'
 
@@ -31,17 +30,13 @@ class PlaceBets extends Component {
         },
         {
           text: "Bet end date (PST)",
-          placeholder: "MM/DD/YYYY",
-          type: "date"
-        },
-        {
-          text: "Bet end time (PST)",
-          placeholder: "HH:MM:SS AM",
-          type: "time"
+          placeholder: "Click for time picker",
+          type: "datetime"
         },
       ]
     }
     this.renderBetRows = this.renderBetRows.bind(this)
+    this.confirmBet = this.confirmBet.bind(this)
   }
 
   renderBetRows(){
@@ -56,30 +51,40 @@ class PlaceBets extends Component {
        case "num":
          inputType = <NumberInput placeholder={placeholder}/>
          break
-       case "date":
-         inputType = <DateInput placeholder={placeholder}/>
-         break
-       case "time":
-         inputType = <TimeInput placeholder={placeholder}/>
+       case "datetime":
+         inputType = <DateTime/>
          break
        default:
         return ""
       }
       return (
-        <div key={idx}>
-          <div>{text}</div>
-          { inputType }
+        <div className="content" key={idx}>
+          <div className="cell left-padding">
+            <div className="left-float medium-bold">{text}</div>
+          </div>
+          <div className="cell">
+            <div className="input">{ inputType }</div>
+          </div>
         </div>
       )
     })
   }
 
+  confirmBet(){
+
+  }
+
   render() {
     return (
-      <div>
-        <div>Add Bet</div>
-        <div className="">
+      <div className="table medium-width">
+        <div className="name">New Bets</div>
+        <div className="body">
+        <div className="card">
           {this.renderBetRows()}
+        </div>
+        <div className="text">
+          <div className="btn-orange" onClick={this.confirmBet}>Confirm Bet</div>
+        </div>
         </div>
       </div>
     )

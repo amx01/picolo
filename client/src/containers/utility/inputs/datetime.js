@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const TimeInput = (props) => {
+const DateTime = (props) => {
   const { placeholder } = props
   return (
-    <input placeholder={placeholder}/>
+    <div>Click for Time Picker</div>
   )
 }
 
-export { TimeInput }
+export { DateTime }

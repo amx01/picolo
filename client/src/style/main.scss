@@ -3,6 +3,8 @@
 @import "./layout/_table.scss";
 @import "./utility/_buttons.scss";
 @import "./utility/_util.scss";
+@import "./layout/_card.scss";
+@import "./layout/_modal.scss";
 
 @import url("https://fonts.googleapis.com/css?family=Barlow");
 
@@ -16,6 +18,7 @@ body {
   font-family: "Barlow", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
+  background-color: #e7e7e7;
 }
 
 button:disabled {

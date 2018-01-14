@@ -1,4 +1,4 @@
-.btn-green {
+.btn {
   font-family: Barlow;
   font-size: 16px;
   font-weight: 500;
@@ -10,11 +10,30 @@
   width: 138px;
   height: 34px;
   border-radius: 200px;
-  background-color: #00ac07;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
   line-height: 34px;
   cursor: pointer;
+  &.no-margin-right{
+    margin-right:none;
+  }
+  &.small {
+    width: 90px;
+  }
+  &.grey {
+    background-color: #b1b1b1;
+  }
+  &.orange {
+    background-color: #fd8824;
+  }
+}
+
+.btn-container {
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  width: 61%;
+  float: right;
 }

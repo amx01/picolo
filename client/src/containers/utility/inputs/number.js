@@ -1,11 +1,25 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
-const NumberInput = (props) => {
-  const { placeholder } = props
-  return (
-    <input placeholder={placeholder}/>
-  )
+class NumberInput extends Component {
+  constructor(props){
+    super(props)
+
+    this.handleKeyDown = this.handleKeyDown.bind(this)
+  }
+
+  handleKeyDown(evt){
+    if (evt.which < 48 || evt.which > 57){
+        evt.preventDefault()
+    }
+  }
+
+  render() {
+    const { placeholder} = this.props
+    return (
+      <input onKeyDown={this.handleKeyDown} placeholder={placeholder}/>
+    )
+  }
 }
+
 
 export { NumberInput }

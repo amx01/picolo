@@ -1,4 +1,4 @@
-pragma solidity ^0.4.4;
+pragma solidity ^0.4.18;
 
 import "../node_modules/zeppelin-solidity/contracts/math/SafeMath.sol";
 
@@ -6,9 +6,9 @@ contract Bets {
 
   using SafeMath for uint256;
 
-  mapping(address => uint256) winnings;
-  mapping(address => uint256) openbets;
-  mapping(address => uint256) livebets;
+  mapping(address => uint256) public winnings;
+  mapping(address => uint256) public openbets;
+  mapping(address => uint256) public livebets;
 
   function openBet() public payable {
     openbets[msg.sender].add(msg.value);
@@ -35,7 +35,7 @@ contract Bets {
     winnings[winner].add(amount);
   }
 
-  function claimWinnigs() public {
+  function claimWinnings() public {
     address payee = msg.sender;
     uint256 payment = winnings[payee];
 

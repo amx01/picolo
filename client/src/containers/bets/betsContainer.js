@@ -87,7 +87,7 @@ class BetsContainer extends Component {
           <div className="table-header">
             <div className="text-container">
               <div className="text">Bet(PIC)</div>
-              <div className="text">Details</div>
+              <div className="text left-align">Details</div>
             </div>
           </div>
           { this.displayBets() }

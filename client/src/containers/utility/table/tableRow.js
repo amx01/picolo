@@ -19,9 +19,14 @@ const TableRow = (props) => {
   return (
     <div className={className}>
       <div className="text-container">
-        <div className="text left">{betAmt} PIC</div>
-        <div className="text">
-          <div className="bold">{coin} at {betClosePrice} by {expiryDate} at {expiryTime}</div>
+        <div className="text left bet">{betAmt} PIC</div>
+        <div className="text center">
+          <div className="bold details">
+            {coin} at {betClosePrice}
+            <div className="light-bold">
+              by {expiryDate} at {expiryTime}
+            </div>
+          </div>
         </div>
         { button ?
           <div className="text">

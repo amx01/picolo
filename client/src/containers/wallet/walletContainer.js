@@ -71,6 +71,7 @@ class WalletContainer extends Component {
       <div>
         <div>My Wallet</div>
         <Balance
+          className={"row"}
           text={"Picolo Balance"}
           PICBalance={userBalance.PICBalance}
           USDBalance={userBalance.USDBalance}
@@ -84,6 +85,7 @@ class WalletContainer extends Component {
     return userBets.map((ele, idx) => {
       return (
         <TableRow
+          className={"row"}
           key={idx}
           betAmt={ele.betAmt}
           coin={ele.coin}
@@ -100,9 +102,20 @@ class WalletContainer extends Component {
     return (
       <div>
         <div>{this.renderBalance()}</div>
-        <div className="tableHeader">My Bets</div>
-        <div>{this.renderWallet()}</div>
+        <div className="table">
+          <div className="name">Open Bets</div>
+          <div className="body">
+            <div className="table-header">
+              <div className="text-container">
+                <div className="text">Bet(PIC)</div>
+                <div className="text left-align">Details</div>
+                <div className="text left-align">Timestamp</div>
+              </div>
+            </div>
+            {this.renderWallet()}
+        </div>
       </div>
+    </div>
     )
   }
 }

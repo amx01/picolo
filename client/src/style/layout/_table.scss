@@ -38,6 +38,9 @@
     .body {
       .row:nth-child(1) {
         border-top: 1px solid black;
+        &.no-border {
+          border: none;
+        }
       }
       .row {
          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -52,6 +55,18 @@
           display: inline-block;
           width: 33.3%;
           line-height: 90px;
+          &.simple {
+            font-family: Barlow;
+            font-size: 24px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #030303;
+            line-height: 88px;
+          }
           &.left-align {
             text-align: left;
           }
